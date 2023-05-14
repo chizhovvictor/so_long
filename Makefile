@@ -7,7 +7,9 @@ SRCS =	so_long.c \
 		utils.c check_map.c \
 		parsing_file_to_map.c \
 		check_no_exit.c \
-		init_window_with_map.c
+		init_window_with_map.c \
+		my_hook_param.c \
+		move_player.c
 
 OBJS = $(SRCS:.c=.o)
 

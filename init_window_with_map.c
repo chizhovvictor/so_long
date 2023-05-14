@@ -1,4 +1,15 @@
+/*
+	1 инициализируем окно с помощью mlx_init
+	2 задаем параметры окна которые плучили из файла с длиной и щшириной
+	3 добавляем спрайты в наши войды
+		1 можно использовать отдельную структуру для этого можно инициализировать все в одной
+		2 используем функцию xpm to image 3 4 аргуементы принимает в себя поинтеры на некие w и h просто чтоб были
+		3 пробегаем по нашей мапе и считываем где 0 1 и т/д/ и запускаем наши спрайты
+
+*/
+
 #include "so_long.h"
+
 
 
 void init_sprites(t_game *map)
@@ -51,6 +62,9 @@ void init_window_with_map(t_game *map)
 	map->mlx_win = mlx_new_window(map->mlx, 64 * map->width_map, 64 * map->height_map, "so_long");
 	init_sprites(map);
 	render_map(map);
-
+	mlx_hook(map->mlx_win, 2, 1L<<0, my_keypress_hook, map);
+	mlx_hook(map->mlx_win, 17, 1L<<17, exit_game, map);
+	render_map(map);
+	//mlx_loop_hook()
 	mlx_loop(map->mlx);
 }

@@ -8,6 +8,7 @@
 #include "./get_next_line/get_next_line.h"
 #include "./libft/libft.h"
 
+
 // typedef struct	s_mlx {
 // 	void	*mlx;
 // 	void	*window;
@@ -49,6 +50,7 @@ typedef struct s_game {
 	void *sprite_items;
 	int height_sprite;
 	int width_sprite;
+	int step_count;
 
 } 	t_game;
 
@@ -87,4 +89,17 @@ void render_map(t_game *map);
 void print_sprites(t_game *map, char c, int y, int x);
 void init_sprites(t_game *map);
 
+
+// =============== EXIT GAME ==========================
+
+int my_keypress_hook(int keycode, t_game *map);
+int exit_game(t_game *map);
+void deleted_sprites(t_game *map);
+
+// =============== MOVE PLAYER ========================
+
+void move_player_up(t_game *map);
+void move_player_down(t_game *map);
+void move_player_left(t_game *map);
+void move_player_right(t_game *map);
 #endif
