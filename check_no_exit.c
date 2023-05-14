@@ -89,5 +89,5 @@ void check_no_exit(t_game *map)
     tmp_map = create_dublicate(map->map);
     find_player(map);
     flood_fill(tmp_map, map);
-    free_arr(tmp_map);
+    //free_arr(tmp_map);
 }

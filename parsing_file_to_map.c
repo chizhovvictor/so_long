@@ -2,9 +2,6 @@
 
 void init_map(t_game *map)
 {
-	map = malloc(sizeof(t_game));
-	if (!map)
-		print_error(1);
 	map->map = NULL;
 	map->height_map = 0;
 	map->width_map = 0;
@@ -45,7 +42,7 @@ void check_count_players_and_exits(char *open_file, t_game *map)
 {
 	int i;
 	i = 0;
-	printf("map->players = %d\nmap->map_exit = %d\nmap->items = %d\n", map->players, map->map_exit, map->items);
+	//printf("map->players = %d\nmap->map_exit = %d\nmap->items = %d\n", map->players, map->map_exit, map->items);
 	while(open_file[i])
 	{
 		if (open_file[i] == 'E')
@@ -56,7 +53,7 @@ void check_count_players_and_exits(char *open_file, t_game *map)
 			map->players++;
 		i++;
 	}
-	printf("map->players = %d\nmap->map_exit = %d\nmap->items = %d\n", map->players, map->map_exit, map->items);
+	//printf("map->players = %d\nmap->map_exit = %d\nmap->items = %d\n", map->players, map->map_exit, map->items);
 
 	if (map->map_exit != 1 || map->items < 1 || map->players != 1)
 		print_error(1);
@@ -82,11 +79,11 @@ void parsing_file(char *av, t_game *map)
 	close(fd);
 	check_open_file(open_file);
 	
-	printf("%s\n", open_file);
+	//printf("%s\n", open_file);
 	
 	check_count_players_and_exits(open_file, map);
 	map->map = ft_split(open_file, '\n');
-	read_arr(map->map);
+	//read_arr(map->map);
 	check_map(map);
 	check_no_exit(map);
 

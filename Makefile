@@ -6,8 +6,8 @@ LIBGNL = ./get_next_line/libgnl.a
 SRCS =	so_long.c \
 		utils.c check_map.c \
 		parsing_file_to_map.c \
-		check_no_exit.c
-#		init_window_with_map.c
+		check_no_exit.c \
+		init_window_with_map.c
 
 OBJS = $(SRCS:.c=.o)
 

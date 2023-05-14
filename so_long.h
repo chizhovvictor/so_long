@@ -8,9 +8,21 @@
 #include "./get_next_line/get_next_line.h"
 #include "./libft/libft.h"
 
-typedef struct	s_mlx {
+// typedef struct	s_mlx {
+// 	void	*mlx;
+// 	void	*window;
+// 	void	*img;
+// 	char	*addr;
+// 	int		bits_per_pixel;
+// 	int		line_length;
+// 	int		endian;
+// 	int     width;
+// 	int     height;
+// }	t_mlx;
+
+typedef struct s_game {
 	void	*mlx;
-	void	*window;
+	void	*mlx_win;
 	void	*img;
 	char	*addr;
 	int		bits_per_pixel;
@@ -18,9 +30,7 @@ typedef struct	s_mlx {
 	int		endian;
 	int     width;
 	int     height;
-}	t_mlx;
 
-typedef struct s_game {
 	char **map;
 	int height_map;
 	int width_map;
@@ -30,7 +40,16 @@ typedef struct s_game {
 	int map_exit;
 	int items;
 	int position_player_x;
-	int position_player_y;	
+	int position_player_y;
+
+	void *sprite_player;
+	void *sprite_wall;
+	void *sprite_place;
+	void *sprite_exit;
+	void *sprite_items;
+	int height_sprite;
+	int width_sprite;
+
 } 	t_game;
 
 
@@ -61,5 +80,11 @@ void check_no_exit(t_game *map);
 void find_player(t_game *map);
 void  flood_fill(char **tmp, t_game *map);
 
+// ============== INIT WINDOW WITH MAP ================
+
+void init_window_with_map(t_game *map);
+void render_map(t_game *map);
+void print_sprites(t_game *map, char c, int y, int x);
+void init_sprites(t_game *map);
 
 #endif

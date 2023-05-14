@@ -38,7 +38,7 @@ int main(int ac, char **av)
 	check_name_file(av[1]);
 	init_map(&map);
 	parsing_file(av[1], &map);
-	//init_window_with_map(&map);
+	init_window_with_map(&map);
 
 
 }
