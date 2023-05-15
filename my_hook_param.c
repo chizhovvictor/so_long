@@ -20,16 +20,32 @@ int exit_game(t_game *map)
 }
 
 
+// int my_keypress_hook(int keycode, t_game *map)
+// {
+// 	if (keycode == 13 || keycode == 12)
+// 		move_player_up(map);
+//     else if (keycode == 0 || keycode == 6)
+// 		move_player_down(map);
+//     else if (keycode == 1)
+// 		move_player_left(map);
+//     else if (keycode == 2)
+// 		move_player_right(map);
+// 	else if (keycode == 53)
+// 		exit_game(map);
+// 	render_map(map);
+//     return (keycode);
+// }
+
 int my_keypress_hook(int keycode, t_game *map)
 {
 	if (keycode == 13 || keycode == 12)
-		move_player_up(map);
+		move_player(map->map[map->position_player_y - 1][map->position_player_x], map, keycode);
     else if (keycode == 0 || keycode == 6)
-		move_player_down(map);
+		move_player(map->map[map->position_player_y + 1][map->position_player_x], map, keycode);
     else if (keycode == 1)
-		move_player_left(map);
+		move_player(map->map[map->position_player_y][map->position_player_x - 1], map, keycode);
     else if (keycode == 2)
-		move_player_right(map);
+		move_player(map->map[map->position_player_y][map->position_player_x + 1], map, keycode);
 	else if (keycode == 53)
 		exit_game(map);
 	render_map(map);

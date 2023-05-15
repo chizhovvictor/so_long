@@ -102,4 +102,5 @@ void move_player_up(t_game *map);
 void move_player_down(t_game *map);
 void move_player_left(t_game *map);
 void move_player_right(t_game *map);
+void move_player(char place, t_game *map, int keycode);
 #endif
