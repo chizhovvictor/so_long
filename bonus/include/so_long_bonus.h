@@ -6,7 +6,7 @@
 /*   By: vchizhov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 17:37:55 by vchizhov          #+#    #+#             */
-/*   Updated: 2023/05/16 12:06:37 by vchizhov         ###   ########.fr       */
+/*   Updated: 2023/05/16 16:25:25 by vchizhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ typedef struct s_game {
 	void	*sprite_player3;
 	void	*sprite_player4;
 	void	*sprite_current_player;
+	void	*sprite_exit2;
 
 }			t_game;
 

@@ -88,4 +88,5 @@ void	parsing_file(char *av, t_game *map)
 	map->map = ft_split(open_file, '\n');
 	check_map(map);
 	check_no_exit(map);
+	free(open_file);
 }

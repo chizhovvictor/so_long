@@ -6,7 +6,7 @@
 /*   By: vchizhov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 14:57:51 by vchizhov          #+#    #+#             */
-/*   Updated: 2023/02/20 17:08:57 by vchizhov         ###   ########.fr       */
+/*   Updated: 2023/05/16 16:30:25 by vchizhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
-	length = (char *)malloc((ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1) * sizeof(char));
+	length = (char *)malloc((ft_strlen_gnl(s1) + \
+				ft_strlen_gnl(s2) + 1) * sizeof(char));
 	if (!length)
 		return (0);
 	while (s1[i])

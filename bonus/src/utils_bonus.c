@@ -6,7 +6,7 @@
 /*   By: vchizhov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 17:35:12 by vchizhov          #+#    #+#             */
-/*   Updated: 2023/05/15 17:37:26 by vchizhov         ###   ########.fr       */
+/*   Updated: 2023/05/16 16:26:10 by vchizhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	**create_dublicate(char **arr)
 	{
 		j = 0;
 		dublicate[i] = malloc(ft_strlen(arr[i]) * sizeof(char) + 1);
-		while(arr[i][j])
+		while (arr[i][j])
 		{
 			dublicate[i][j] = arr[i][j];
 			j++;

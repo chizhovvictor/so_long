@@ -29,7 +29,6 @@ int	exit_game(t_game *map)
 {
 	deleted_sprites(map);
 	mlx_destroy_window(map->mlx, map->mlx_win);
-	system("leaks so_long_bonus");
 	exit(0);
 }
 

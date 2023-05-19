@@ -6,7 +6,7 @@
 /*   By: vchizhov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:16:59 by vchizhov          #+#    #+#             */
-/*   Updated: 2023/05/15 16:21:55 by vchizhov         ###   ########.fr       */
+/*   Updated: 2023/05/16 18:02:21 by vchizhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ void	check_exit(char **map)
 	int	i;
 	int	j;
 	int	exit_map;
+	int	item_map;
 
 	i = 0;
-	j = 0;
 	exit_map = 0;
+	item_map = 0;
 	while (map[i])
 	{
 		j = 0;
@@ -28,14 +29,14 @@ void	check_exit(char **map)
 		{
 			if (map[i][j] == 'E')
 				exit_map++;
+			else if (map[i][j] == 'C')
+				item_map++;
 			j++;
 		}
 		i++;
 	}
-	if (exit_map != 0)
-	{
+	if (exit_map != 0 || item_map != 0)
 		print_error(1);
-	}
 }
 
 void	f_fill(char **arr_map, t_game *map, int y, int x)
@@ -44,6 +45,11 @@ void	f_fill(char **arr_map, t_game *map, int y, int x)
 		return ;
 	if (arr_map[y][x] == 'F' || arr_map[y][x] == '1')
 		return ;
+	if (arr_map[y][x] == 'E')
+	{
+		arr_map[y][x] = 'F';
+		return ;
+	}
 	arr_map[y][x] = 'F';
 	f_fill(arr_map, map, y - 1, x);
 	f_fill(arr_map, map, y + 1, x);

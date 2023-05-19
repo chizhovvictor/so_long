@@ -6,7 +6,7 @@
 /*   By: vchizhov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:22:04 by vchizhov          #+#    #+#             */
-/*   Updated: 2023/05/15 16:29:00 by vchizhov         ###   ########.fr       */
+/*   Updated: 2023/05/16 16:27:04 by vchizhov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	init_sprites(t_game *map)
 	"./sprites/mob.xpm", &map->width_sprite, &map->height_sprite);
 }
 
-void	 print_sprites(t_game *map, char c, int y, int x)
+void	print_sprites(t_game *map, char c, int y, int x)
 {
-	if  (map->items == 0)
+	if (map->items == 0)
 		init_sprite_open_exit(map);
 	if (c == '0')
 		mlx_put_image_to_window(map->mlx, map->mlx_win, \
