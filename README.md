@@ -82,6 +82,9 @@
 1111111111111111
 10M10000000001C1
 1C00011111M00101
+111001C000001101
+11M0111111000M01
+1110111100011111
 1P0011E000C00001
 1111111111111111</pre><br><br>
 						<p align="center">
@@ -89,7 +92,7 @@
 						</p>
 					</td>
 					<td>
-						<img src="/sprites/readme.png"  width="32%">
+						<img src="/sprites/readme2.png"  width="32%">
 						<p>
 							<i>Render in game</i>
 						</p>
