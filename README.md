@@ -92,7 +92,7 @@
 						</p>
 					</td>
 					<td>
-						<img src="/sprites/readme2.png"  width="20%">
+						<img src="/sprites/readme2.png"  width="30%">
 						<p>
 							<i>Render in game</i>
 						</p>
