@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="Screen Shot 2023-08-03 at 7.50.27 PM.png">
+	<img src="/sprites/readme.png">
 </p>
 
 <h1 align="center">
