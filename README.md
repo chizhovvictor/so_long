@@ -89,7 +89,7 @@
 						</p>
 					</td>
 					<td>
-						<img src="Screen Shot 2023-08-03 at 7.50.27 PM.png"  width="32%">
+						<img src="/sprites/readme.png"  width="32%">
 						<p>
 							<i>Render in game</i>
 						</p>
