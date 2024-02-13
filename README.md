@@ -22,8 +22,8 @@
 <table>
 	<tr>
 		<td align="center"><code>W</code><br>Moving up</td>
-		<td align="center"><code>A</code><br>Moving left</td>
-		<td align="center"><code>S</code><br>Moving down</td>
+		<td align="center"><code>S</code><br>Moving left</td>
+		<td align="center"><code>A</code><br>Moving down</td>
 		<td align="center"><code>D</code><br>Moving right</td>
 		<td align="center"><code>ESC</code><br>Close the game</td>
 	</tr>
@@ -79,11 +79,11 @@
 				<tr>
 					<td><br><br>
 						<pre align="center">
-1111111111111
-10010000000C1
-10000111110C1
-1P0011E000001
-1111111111111</pre><br><br>
+1111111111111111
+10M10000000001C1
+1C00011111M00101
+1P0011E000C00001
+1111111111111111</pre><br><br>
 						<p align="center">
 							<i>Content .ber file</i>
 						</p>
